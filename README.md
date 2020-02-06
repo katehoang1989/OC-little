@@ -1,70 +1,70 @@
-# OpenCore 0.5+ 部件补丁
+# OpenCore 0.5+ part patch
 
-## 说明
+## Description
 
-依据 OpenCore 0.5+ 的要求和建议，制作本部件补丁。
+Make a patch for this component based on the requirements and recommendations of OpenCore 0.5+.
 
-## 主要内容
+## main content
 
-- 总述 
-- ACPI 二进制更名
-- 预置变量法
-- 仿冒设备 
--  `SSDT` 补丁加载顺序
--  `AOAC`补丁方法
-- 操作系统补丁 
-- 注入 X86
-- 仿冒 `EC` 
-- OC-`PNLF` 注入方法
-- `SBUS(SMBU)` 补丁
-- PS2 键盘映射 @OC-xlivans
-- 键盘无法输入的应急解决方案 `PS2N` 
-- 添加丢失的部件 
-- OC `I2C-TPXX` 补丁方法
-- OC `I2C-GPIO` 补丁
-- OC -Thinkpad 电池补丁
-- OC 其他电池补丁 
-- 禁用 EHCx
-- `PTSWAK` 综合补丁和扩展补丁 
-- `PNP0C0E` 睡眠修正方法 
-- `0D6D` 补丁
-- 惠普特殊的`060D`补丁
-- 仿冒以太网和重置以太网 BSD Name 
-- 亮度快捷键补丁
-- `CMOS`重置补丁
-- ACPIDebug
-- `ACPI`定制`USB`端口
-- 禁止PCI设备
-- `HPET_RTC_TIMR`三合一补丁
-- `CMOS`内存和 ***RTCMemoryFixup*** 
-- `AOAC`禁止独显
-- `Dell`特殊补丁
-- 小新 PRO13 特殊更名和补丁
-- 为了方便使用，整理了部分驱动列表，仅供参考：
+- Overview 
+-ACPI Binary Rename
+-Preset variable method
+-Counterfeit devices
+-`SSDT` patch loading order
+-`AOAC` patch method
+-Operating system patches
+-Injected X86
+-Counterfeit `EC`
+-OC-`PNLF` injection method
+-`SBUS (SMBU)` patch
+-PS2 keyboard mapping @ OC-xlivans
+-Keyboard emergency solution `PS2N`
+-Add missing parts
+-OC `I2C-TPXX` patch method
+-OC `I2C-GPIO` patch
+-OC -Thinkpad Battery Patch
+-OC other battery patches
+-Disable EHCx
+-`PTSWAK` comprehensive and extended patches
+-`PNP0C0E` Sleep correction method
+-`0D6D` patch
+-HP Special `060D` Patch
+-Phishing and resetting Ethernet BSD Name
+-Brightness shortcut patch
+-`CMOS` reset patch
+-ACPIDebug
+-`ACPI` custom` USB` port
+-Disable PCI devices
+-`HPET_RTC_TIMR` 3-in-1 patch
+-`CMOS` memory and *** RTCMemoryFixup ***
+-`AOAC` prohibits independent display
+-`Dell` special patch
+-Xiaoxin PRO13 special rename and patch
+-For the convenience of use, we have compiled a list of some drivers for reference only:
 
-  - config-1-Lilu-SMC-WEG-ALC驱动列表
-  - config-2-PS2键盘驱动列表
-  - config-3-BCM无线和蓝牙驱动列表
-  - config-4-I2C驱动列表
+  -config-1-Lilu-SMC-WEG-ALC driver list
+  -config-2-PS2 keyboard driver list
+  -config-3-BCM wireless and Bluetooth driver list
+  -config-4-I2C driver list
 
 ### Credits
 
-- 特别感谢：
-  - @宪武 制作的适用于 **[OpenCore](https://github.com/acidanthera/OpenCorePkg)** 的 ACPI 部件补丁
-  - @Bat.bat, @黑果小兵, @套陆 审核完善
+- Special thanks to:
+  -ACPI component patch for ** [OpenCore] (https://github.com/acidanthera/OpenCorePkg) ** made by @ 宪 武
+  -@ Bat.bat, @ 黑 果 小兵, @ 套 陆
 
-- 感谢：
-  - @冬瓜-X1C5th
-  - @OC-xlivans
-  - @Air 13 IWL-GZ-Big Orange (OC perfect)
-  - @子骏oc IWL
-  - @大勇-小新air13-OC-划水小白 
-  - ......
+-Thanks:
+  -@ 冬瓜 -X1C5th
+  -@ OC-xlivans
+  -@Air 13 IWL-GZ-Big Orange (OC perfect)
+  -@ 子 骏 oc IWL
+  -@ 大勇-小 新 air13-OC-Paddle Little White
+  -...
 
-- Thanks: 
-  - [Acidanthera](https://github.com/acidanthera) Maintaining: 
-    - [AppleSupportPkg](https://github.com/acidanthera/AppleSupportPkg)
-    - ~~[AptioFixPkg](https://github.com/acidanthera/AptioFixPkg)~~(Achieved)
-    - [MacInfoPkg](https://github.com/acidanthera/MacInfoPkg)
-    - [OCSupportPkg](https://github.com/acidanthera/OCSupportPkg)
-    - [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+-Thanks:
+  -[Acidanthera] (https://github.com/acidanthera) Maintaining:
+    -[AppleSupportPkg] (https://github.com/acidanthera/AppleSupportPkg)
+    -~~ [AptioFixPkg] (https://github.com/acidanthera/AptioFixPkg) ~~ (Achieved)
+    -[MacInfoPkg] (https://github.com/acidanthera/MacInfoPkg)
+    -[OCSupportPkg] (https://github.com/acidanthera/OCSupportPkg)
+    -[OpenCorePkg] (https://github.com/acidanthera/OpenCorePkg)
