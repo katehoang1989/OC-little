@@ -1,28 +1,27 @@
-# 总述
+# Overview
 
-### ACPI更名和补丁
+### ACPI Rename and Patch
 
-- 尽可能做到不用或者少用更名和补丁。比如： `HDAS rename HDEF` 、 `EC0 rename EC` 、 `SSDT-OC-XOSI` 等等。尤其对带下划线的 `MethodObj` （如 _STA、 _OSI等）的更名要 **谨慎使用** 。一般情况下：
-  - 无需操作系统补丁。对于受系统限制而无法正常工作的部件，根据ACPI的具体情况定制补丁。对操作系统有特别要求的 **谨慎使用** 《操作系统补丁》。
-  
-  - 一些机器无需使用亮度快捷键更名和补丁。使用《PS2键盘映射@OC-xlivans》能够达到同等效果。
-  - 就目前而言，绝大多数机器需要《0D6D补丁》来解决 `秒醒` 问题。
-  - 对于电池部分，如果必须拆分数据的话，电池的更名和补丁必不可少。
-  - 绝大多数Thinkpad机器需要《PTSWAK综合补丁和扩展补丁》来解决唤醒后呼吸灯未恢复的问题。
-  - 有睡眠按键【小月亮】的机器，当按下这个按键后导致系统崩溃的可参考《PNP0C0E睡眠修正方法》。
-- 一些问题的解决要求启用或者禁用某些设备。启用或者禁用设备的方法有：
-  - 《ACPI二进制更名》——这种方法对于单系统非常有效。对于多系统，应评估更名对其他系统造成的影响。 **谨慎使用** 。
-  - 《预置变量法》——可能对其他部件或者其他系统造成影响。 **谨慎使用** 。
-  - 《仿冒设备》——这种方法非常可靠。 **推荐使用** 。
+-Try to use as few or as few renames and patches as possible. For example: `HDAS rename HDEF`,` EC0 rename EC`, `SSDT-OC-XOSI`, etc. Especially for underlined `MethodObj` (such as _STA, _OSI, etc.) rename ** use with caution **. In general:
+  -No operating system patches required. For components that are restricted by the system and cannot work normally, customize the patch according to the specific situation of ACPI. ** Use with caution ** Operating System Patches with special requirements for operating systems.
+  
+  -Some machines don't need to rename and patch using brightness shortcuts. Use "PS2 keyboard mapping @ OC-xlivans" to achieve the same effect.
+  -At present, most machines need "0D6D Patch" to solve the problem of wake up in seconds.
+  -For the battery part, if the data must be split, battery renaming and patching are essential.
+  -Most Thinkpad machines need "PTSWAK Comprehensive Patch and Extended Patch" to solve the problem that the breathing light does not recover after waking up.
+  -For machines with a sleep button [Little Moon], please refer to the "PNP0C0E Sleep Correction Method" for the system crash when this button is pressed.
+-Solving some problems requires enabling or disabling certain devices. To enable or disable the device:
+  -ACPI Binary Rename-This method is very effective for single systems. For multiple systems, the impact of the rename on other systems should be assessed. ** Use with caution **.
+  -"Preset Variables Method"-may affect other components or other systems. ** Use with caution **.
+  -Counterfeit Devices-This method is very reliable. **Recommended Use** .
 
-### 重要的补丁
+### Important patches
 
--   ***SSDT-RTC0***  ——位于《仿冒设备》
+-*** SSDT-RTC0 ***-located in Counterfeit Devices
 
-  某些机器因RTC【PNP0B00】被禁用而导致启动阶段系统崩溃，使用 ***SSDT-RTC0***  可解决这个问题。
+  Some machines crash during startup due to the disabled RTC [PNP0B00]. Use *** SSDT-RTC0 *** to solve this problem.
 
--   ***SSDT-EC*** ——位于《仿冒EC》
+-*** SSDT-EC ***-Located in "Counterfeit EC"
 
-  对于 **10.15+** 系统[笔记本]，如果EC控制器名称不是 `EC` 需添加 ***SSDT-EC*** ，否则启动阶段系统崩溃。
-  
+  For ** 10.15 + ** system [notebook], if the EC controller name is not `EC`, add *** SSDT-EC ***, otherwise the system crashes during the startup phase.
 
